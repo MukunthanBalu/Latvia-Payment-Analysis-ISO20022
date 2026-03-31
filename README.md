@@ -1,37 +1,121 @@
-🇱🇻 Latvia Payment Landscape Analysis (2000–2024)
-A Data Engineering & Fintech Impact Study
+# 🇱🇻 Latvia Payment Landscape Analysis (2000–2024)
+### Data Engineering & ISO 20022 Impact Study
 
-📌 Project Overview
-This repository contains an end-to-end data analytics pipeline examining 25 years of Latvian Credit Transfer data. The project specifically highlights the structural shift in payment volumes following the regional adoption of the ISO 20022 messaging standard.
+---
 
-🛠️ The Tech Stack
-Language: Python 3.10 
+## 📌 Project Overview
 
-Libraries: Pandas (Data Manipulation), NumPy (Numerical Analysis) 
+This project is a deep-dive into **25 years of Latvian financial infrastructure data**. Using Python and Business Intelligence tools, I mapped the full evolution of Credit Transfer activity in Latvia — tracing how the adoption of **ISO 20022 payment messaging standards** fundamentally transformed the scale and structure of the country's banking ecosystem.
 
-Environment: Google Colab 
+The analysis spans from Latvia's early post-Soviet financial system (2000) through to the **€1 Trillion milestone** reached in 2024, connecting macroeconomic turning points to real banking infrastructure decisions.
 
-BI Tool: Google Looker Studio (Financial Dashboarding) 
+> **Analyst:** Mukunthan Balu | ISO 20022 Certified | [LinkedIn](https://linkedin.com/in/mukunthanbalu7) | [Portfolio](https://mukunthanbalu.vercel.app)
 
-📈 Key Financial Insights
-The ISO 20022 Spike: The analysis identified a massive 27.27% surge in transaction value in 2023, totaling over €543 Billion.
+---
 
-Exponential Growth: By 2024, the total credit transfer value surpassed €1 Trillion, representing a historical peak for the Latvian infrastructure.
+## 🛠️ Technical Stack
 
-Stability Period: Data confirms a period of market "plateau" between 2013 and 2021 before the recent technological modernization triggered growth.
+| Layer | Tools Used |
+|---|---|
+| Language | Python 3.10 |
+| Libraries | Pandas, NumPy |
+| Environment | Google Colab |
+| Data Source | European Central Bank (ECB) Statistical Data Warehouse |
+| Visualization | Google Looker Studio |
 
-📂 Repository Contents
-Latvia_Payment_Analysis_Clean.ipynb: The Python script used for renaming columns, handling null values, and calculating growth percentages.
+---
 
-latvia_clean_final.csv: The refined dataset used for the final visualization.
+## 📈 Key Financial Insights
 
-Latvia_Payment_Analysis_2024.pdf: The final executive dashboard exported from Looker Studio.
+### 1. The ISO 20022 Inflection Point
+> A **27.27% surge in credit transfer value** was recorded in 2023 alone — directly aligning with Latvia's final transition phase to ISO 20022 messaging standards across Baltic banking infrastructure.
 
-⚙️ Data Pipeline Process
-Extraction: Sourced raw payment data from the European Central Bank (ECB).
+### 2. The €1 Trillion Milestone
+> By **2024**, the total annual value of processed credit transfers in Latvia surpassed **€1 Trillion** for the first time in recorded history — a benchmark that would have been unthinkable during the plateau years.
 
-Transformation: Used Python to map complex system codes (e.g., B010) into human-readable financial metrics (Value_Millions).
+### 3. The Decade of Stability (2013–2021)
+> Transaction values remained largely flat for nearly a decade. This plateau confirms that the explosive post-2022 growth is driven by **technological modernisation** — not inflation or population growth.
 
-Analysis: Calculated Year-over-Year (YoY) growth to isolate the impact of recent fintech regulations.
+### 4. Historical Volatility Context
+> Two sharp peaks in **2007** and **2013** followed by steep declines reflect the global financial crisis and Latvia's subsequent austerity period — providing critical context for interpreting the current growth trajectory.
 
-Visualization: Built a time-series dashboard to communicate findings to stakeholders.
+---
+
+## 📂 Repository Structure
+
+```
+latvia-payment-analysis/
+│
+├── Latvia_Payment_Analysis_Clean.ipynb   # Python notebook: cleaning & transformation logic
+├── latvia_data.csv                        # Raw source data from ECB
+├── latvia_clean_final.csv                 # Processed, analysis-ready dataset
+└── Latvia_Payment_Analysis_2024.pdf       # Executive report & final visualisation
+```
+
+---
+
+## ⚙️ Data Pipeline
+
+```
+ECB Statistical Data Warehouse
+        │
+        ▼
+[ Extraction ]
+Raw CSV download → latvia_data.csv
+
+        │
+        ▼
+[ Cleaning & Transformation ] — Python (Pandas)
+• Renamed complex ECB bank codes (e.g. B010) into readable fields
+• Handled null values in Growth_Pct for base year (2000 → 0%)
+• Standardised date formats and column structure
+• Output → latvia_clean_final.csv
+
+        │
+        ▼
+[ Visualisation ] — Google Looker Studio
+• 25-year time-series area chart
+• Annotated ISO 20022 transition milestones
+• Executive narrative overlay
+• Output → Latvia_Payment_Analysis_2024.pdf
+```
+
+---
+
+## 📊 Dashboard Preview
+
+![Latvia Payment Analysis Chart](Latvia_Payment_Analysis_2024.pdf)
+
+*Credit Transfer Volume & ISO 20022 Transition Analysis — Latvia, 2000–2024*
+
+---
+
+## 🔍 Data Source
+
+**European Central Bank — Statistical Data Warehouse**
+- Dataset: Payment Statistics / Credit Transfers by Value
+- Coverage: Latvia (LV), Annual, 2000–2024
+- Access: [ECB SDW](https://sdw.ecb.europa.eu)
+
+> All data is publicly available and sourced directly from official ECB statistical releases.
+
+---
+
+## 💼 Business Relevance
+
+This analysis was designed to mirror a real **BA/Data Analyst deliverable** in a banking or fintech environment:
+
+- **Stakeholder framing** — findings presented as executive insights, not raw numbers
+- **Regulatory context** — ISO 20022 migration tied directly to observed data patterns
+- **Baltic market specificity** — focused on Latvia's unique post-Soviet financial trajectory
+- **Actionable narrative** — the plateau-to-boom story is a clear signal for infrastructure investment timing
+
+---
+
+## 👤 About the Analyst
+
+**Mukunthan Balu** — Junior Data/Business Analyst based in Riga, Latvia.
+Certified in ISO 20022 Payment Standards and Jira Project Management.
+Background in fintech compliance, HR data systems, and business operations.
+
+🔗 [LinkedIn](https://linkedin.com/in/mukunthanbalu7) · [GitHub](https://github.com/MukunthanBalu) · [Portfolio](https://mukunthanbalu.vercel.app)
