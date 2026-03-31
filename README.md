@@ -84,7 +84,7 @@ Raw CSV download → latvia_data.csv
 
 ## 📊 Dashboard Preview
 
-![Latvia Payment Analysis Chart](Latvia_Payment_Analysis_2024.pdf)
+![Latvia Payment Analysis Chart]Latvia_Payment_Analysis_2024.pdf
 
 *Credit Transfer Volume & ISO 20022 Transition Analysis — Latvia, 2000–2024*
 
